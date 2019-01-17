@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    background-color: ;
+}
+
+.right {
+    float: right;
+}
+
+.ten-wide {
+    width: 10%;
+}
