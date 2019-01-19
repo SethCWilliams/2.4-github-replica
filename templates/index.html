@@ -3,10 +3,12 @@
 
 
 {% block content %}
- <h2 class="col-md-9">
-    {{Title}}
-</h2>
-<button type="button" class="col-md-3">
-    <img class="ten-wide" src="../static/package/build/svg/star.svg" alt="star button">Star
-</button>
+    {% for repo in repos %}
+        <div class="d-block">
+            <a href="{{ repo.html_url }}">{{ repo.name }}</a>
+
+            <p>{{ repo.language }}</p>
+            <p>{{ repo.updated_at }}</p>
+        </div>
+    {%  endfor %}
 {% endblock %}
