@@ -2,9 +2,12 @@
 
 
 {% block content %}
-    {% for follower in followers %}
-        <p>{{ follower.login }}</p>
-        <p><img src="{{ follower.avatar_url }}" alt=""></p>
+    {% for user_content in user_filler %}
+        <p>{{ user_content.login }}</p>
+        <p>{{ user_content.name }}</p>
+        <p>{{ user_content.bio }}</p>
+        <p>{{ user_content.location }}</p>
+        <p><img src="{{ user_content.avatar_url }}" alt=""></p>
     {%  endfor %}
 {% endblock %}
 

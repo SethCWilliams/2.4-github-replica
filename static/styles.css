@@ -28,15 +28,19 @@ img {
     width: 100%;
     max-width: 20px;
 }
-
+.container {
+    margin-left: 6.3%;
+}
 .corner-logo {
     width: 34px;
+}
 
+p img {
+    width: 20px;
 }
 
 header {
-    background-color: red;
-    /*background-color: #24292D;*/
+    background-color: #24292D;
     padding: 12px 14px 12px 14px;
 }
 
@@ -48,12 +52,41 @@ header {
     border-radius: 5px;
     padding-bottom: 2px;
     padding-top: 1px;
+    color: white;
 }
 
 .right {
     float: right;
+    margin-top: 5px;
 }
 
 .ten-wide {
     width: 10%;
+}
+
+.padding-left {
+    padding-left: 15px;
+    padding-top: 6px;
+    font-size: .9rem;
+}
+
+.margin-top {
+    margin-top: 2.2%;
+}
+
+.avatar {
+    width: 261px;
+}
+
+.left {
+    padding-left: 9px;
+}
+
+.left2 {
+    padding-left: 12px;
+}
+
+.text-white {
+    color: white;
+    filter: invert(100%);
 }
