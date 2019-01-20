@@ -1,5 +1,5 @@
 import csv
-github_api_token = '8d23ff8b9838003b71cade8d2acdb857ebb86ff8'
+
 headers = {
     'Authorization': 'token {}'.format(github_api_token)
 }
