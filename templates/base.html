@@ -38,88 +38,35 @@
 
 <main class="container big-picture">
     <div class="row margin-top">
-        <div class="col-md-3">
-            <div class="container avatar"><img src="{{ avatar }}" alt="my avatar">
-                <p class='smiley'><img src="../static/package/build/svg/smiley.svg" alt="smiley face"></p>
+        <div class="col-md-3 width">
+            <div class="container avatar user_info_pad"><img src="{{ avatar }}" alt="my avatar" id="avatar-border">
             </div>
-            <div class="container">
-                <p>See your status</p>
+            <div class="container user_info_pad">
+                <p class="status"  id="right-left-border">Set your status</p>
             </div>
-            <div class="container">
-                <p>Give us feedback</p>
+            <div class="container user_info_pad">
+                <p class="status" id="feedback-border">Give us feedback</p>
             </div>
-            <div class="container">{{ name }}</div>
-            <div class="container">
+            <div class="container user_info_pad"><h4>{{ name }}</h4></div>
+            <div class="container name user_info_pad">
                 SethCWilliams
             </div>
-            <div class="container">{{ bio }}</div>
-            <div class="container">{{ location }}</div>
-            <div class="container">{{ email }}</div>
-            <div class="container">
-                <button type="button">Edit</button>
+            <p class='smiley user_info_pad'><img src="../static/package/build/svg/smiley.svg" alt="smiley face"></p>
+            <div class="container user_info_pad font-size">{{ bio }}</div>
+            <div class="container user_info_pad fontamentals">
+                <img src="../static/package/build/svg/location.svg" alt="location" class="tiny"> {{ location }}
             </div>
-            <div><a href="{{ organizations }}">Organizations</a></div>
+            <div class="container user_info_pad fontamentals blue">
+                <img src="../static/package/build/svg/mail.svg" alt="email" class="tiny">
+                <a type="email" href="swilliams9334@gmail.com"> {{ email }} </a>
+            </div>
+            <div class="container user_info_pad margin-top-2">
+                <button type="button" class="one-hundred small-font">Edit</button>
+            </div>
+            <div class="container organizations"><a href="{{ organizations }}">Organizations</a></div>
         </div>
         <div class="col-md-9">
-            <div class="row deep-dive">
-                <div class="col-md-2">
-                    <h5>Overview</h5>
-                </div>
-                <div class="col-md-2">
-                    <h5>Repositories</h5>
-                </div>
-                <div class="col-md-2">
-                    <h5>Stars</h5>
-                </div>
-                <div class="col-md-2">
-                    <h5><a href="followers.html">Followers</a>
-                </div>
-                <div class="col-md-2">
-                    <h5>Following</h5>
-                </div>
-                <div class="col-md-2">
-                    <h5></h5>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 search-bar">
-                    <input type="text" placeholder="Find a repository..." class="w-100">
-                </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col">
-                            <div class="dropdown">
-                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Type<span class="strong">All</span>
-                              </button>
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                              </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="dropdown">
-                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Dropdown button
-                              </button>
-                            </div>
-                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                          </div>
-                        </div>
-                        <div class="col">
-                            <button type="button">New</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                {% block content %} {% endblock %}
-            </div>
+            {% block content %} {% endblock %}
         </div>
 
     </div>

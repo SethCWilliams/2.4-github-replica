@@ -2,6 +2,26 @@
 
 
 {% block content %}
+     <div class="row deep-dive">
+        <div class="col-md-2">
+            <h5>Overview</h5>
+        </div>
+        <div class="col-md-2 repos_tab">
+            <h5>Repositories</h5>
+        </div>
+        <div class="col-md-2">
+            <h5>Stars</h5>
+        </div>
+        <div class="col-md-2">
+            <h5><a href="followers.html">Followers</a>
+        </div>
+        <div class="col-md-2">
+            <h5>Following</h5>
+        </div>
+        <div class="col-md-2">
+            <h5></h5>
+        </div>
+    </div>
     {% for user_content in user_filler %}
         <p>{{ user_content.login }}</p>
         <p>{{ user_content.name }}</p>

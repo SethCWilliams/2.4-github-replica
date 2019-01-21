@@ -80,11 +80,10 @@ header {
 }
 
 a:hover {
-    font-weight: bold;
     color: inherit;
     text-decoration: none;
-    padding-bottom: 18px;
-    border-bottom: 2px solid #E16220;
+    padding-bottom: 16px;
+    border-bottom: 2px solid gray;
 }
 
 .left {
@@ -109,15 +108,13 @@ a:hover {
 .smiley {
     width: 18px;
     position: absolute;
-    top: 196px;
+    top: 200px;
     left: 30px;
+    color: #1269D3;
 }
 
 .deep-dive {
     margin-top: 18px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #D1D5DA;
-    margin-bottom: 16px;
 }
 
 div h5 {
@@ -132,4 +129,112 @@ div h5 {
 .search-bar {
     padding-left: 0;
     width: 381px;
+}
+
+.repos_tab {
+    font-weight: bold;
+    color: inherit;
+    text-decoration: none;
+    margin-bottom: 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #E16220;
+}
+
+.repo_box{
+    margin-top: 0;
+    border-top: 1px solid #D1D5DA;
+    padding-top: 17px;
+}
+
+.width {
+    width: 229px;
+}
+
+.user_info_pad {
+    padding-right: 10px;
+}
+
+.status {
+    font-size: 12px;
+    margin: 0;
+    padding-bottom: 12px;
+    padding-top: 5px;
+    padding-left: 15px;
+}
+
+#right-left-border {
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+    padding-top: 17px;
+}
+
+#feedback-border {
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+}
+
+#avatar-border {
+    border-right: 1px solid gray;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+}
+
+.green {
+    background-color: #C857AF;
+    filter: invert(100%);
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.smaller   {
+    width: 20px;
+}
+
+.small-font {
+    font-size: small;
+}
+
+h4  {
+    padding-top: 15px;
+    font-weight: bold;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: thin;
+}
+
+.font-size {
+    font-size: smaller;
+    padding-bottom: 14px;
+    padding-top: 14px;
+}
+
+.tiny   {
+    width: 12px;
+}
+
+.fontamentals {
+    font-size: medium;
+}
+
+.one-hundred {
+    width: 100%;
+}
+
+.margin-top-2 {
+    margin-top: 15px;
+}
+
+.blue {
+    color: dodgerblue;
+}
+
+.organizations {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid darkgray;
 }
