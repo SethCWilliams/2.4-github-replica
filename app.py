@@ -1,9 +1,6 @@
 import csv
 
-github_api_token = ''
-headers = {
-    'Authorization': 'token {}'.format(github_api_token)
-}
+
 
 
 
@@ -11,9 +8,19 @@ from flask import Flask
 from flask import request
 import requests
 from flask import render_template
+from flask_humanize import Humanize
+
+try:
+    from githubkey import github_api_key
+    headers = {"Authorization": "token {}".format(github_api_key)}
+except:
+    print("Hey, I see you don't have a github API key.")
+    print("That's okay, you can use the public API key")
+    headers = {}
+
 
 app = Flask(__name__)
-
+humanize = Humanize(app)
 
 @app.route("/")
 def index():
@@ -41,7 +48,7 @@ def index():
 
     return render_template('index.html', **context)
 
-@app.route("/followers.html")
+@app.route("/followers")
 def followers():
     user_data = requests.get("https://api.github.com/users/SethCWilliams", headers=headers)
     decoded = user_data.json()
