@@ -3,6 +3,7 @@
 
 
 
+
 {% block content %}
     <div class="row deep-dive">
         <div class="col-md-2">
@@ -66,7 +67,7 @@
             <a href="{{ repo.html_url }}">{{ repo.name }}</a>
 
             <p>{{ repo.language }}</p>
-            <relative-time datetime="{{ repo.updated_at }}">  </relative-time>
+            <date>{{ repo.updated_at | humanize('naturalday') }}></date>
         </div>
     {%  endfor %}
     </div>
