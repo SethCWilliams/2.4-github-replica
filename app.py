@@ -1,6 +1,6 @@
 import csv
 
-github_api_token = ''
+github_api_token = '3c0979d9a063806cc70e9d7fcd4b05018aed35ce'
 headers = {
     'Authorization': 'token {}'.format(github_api_token)
 }
@@ -20,6 +20,9 @@ def index():
     user_data = requests.get("https://api.github.com/users/SethCWilliams", headers=headers)
     decoded = user_data.json()
 
+    search_bar = requests.post("https://api.github.com/users/SethCWilliams", headers=headers)
+    find_stuff = search_bar.json()
+
     repos = requests.get("https://api.github.com/users/SethCWilliams/repos", headers=headers)
     repo_info = repos.json()
 
@@ -30,7 +33,7 @@ def index():
         'location': decoded['location'],
         'email': decoded['email'],
         'organizations': decoded['organizations_url'],
-        'repos': repo_info
+        'repos': repo_info[::-1]
     }
 
     # context1 = context
@@ -64,7 +67,7 @@ def followers():
         'name': decoded['name'],
         'location': decoded['location'],
         'email': decoded['email'],
-        'user_filler': user_info_list
+        'user_filler': user_info_list[::-1]
     }
 
 
