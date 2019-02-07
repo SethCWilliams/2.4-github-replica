@@ -48,7 +48,7 @@ def index():
 
     return render_template('index.html', **context)
 
-@app.route("/followers")
+@app.route("/followers.html")
 def followers():
     user_data = requests.get("https://api.github.com/users/SethCWilliams", headers=headers)
     decoded = user_data.json()
